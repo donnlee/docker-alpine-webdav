@@ -4,10 +4,9 @@ MAINTAINER docker@pluza.com
 # When running this container, map host's content subdir to /var/webdav
 # Eg.: docker run <...> -v /path/to/content:/var/webdav
 
-# -U : Update cache
 # -v : Verbose
 # apache2-utils: Needed for htpasswd program.
-RUN apk -Uv --no-cache add \
+RUN apk -v --no-cache add \
   bash apache2 apache2-webdav apache2-utils
 
 # Create a subdir for webdav lockdb file.
