@@ -21,9 +21,9 @@ RUN mkdir -p /run/apache2
 
 RUN mkdir -p /var/webdav
 
-ADD dav.conf /etc/apache2/conf.d/
+ADD no_auth/dav.conf /etc/apache2/conf.d/
 ADD la.mp4 /var/webdav/
-ADD run.sh /
+ADD no_auth/run.sh /
 RUN chmod 750 /run.sh
 
 EXPOSE 80 443
